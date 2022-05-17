@@ -1,0 +1,33 @@
+{
+  "name": "server_beauty_salon",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/index.js\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.11",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mongoose": "^5.7.37",
+    "@types/pg": "^7.14.4",
+    "@types/uuid": "^8.3.0",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4",
+    "typescript": "^4.0.2"
+  }
+}
