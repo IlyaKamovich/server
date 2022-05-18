@@ -1,13 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
 
-const config = require('./config');
+const config = require('./config/app');
 
 const app = express();
 config.express(app);
 config.routes(app);
 
-const { port, mongoUri } = config.app;
+const { mongoUri } = config.app;
+
+const PORT = process.env.PORT || 3333;
 
 const runServer = async () => {
   try {
@@ -17,7 +19,7 @@ const runServer = async () => {
       useUnifiedTopology: true,
     });
 
-    app.listen(port, () => console.log(`Server started: http://localhost:${port}`));
+    app.listen(PORT, () => console.log(`Server started: http://localhost:${PORT}`));
   } catch (error) {
     console.log(error);
   }
